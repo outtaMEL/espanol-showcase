@@ -1,38 +1,40 @@
 # Español Fácil
 
-**Making Spanish video usable for a beginner learning through comprehensible input.**
-
-Personal product project by Fan Niu. Product concept, feature direction and iterative review were my contribution; implementation was primarily completed with AI assistance.
+**A personal Spanish-learning workspace that brings vocabulary, sentence and grammar support into the videos I want to watch.**
 
 ![Español study workspace with video and bilingual transcript](assets/study-workspace.jpg)
 
-*Video and bilingual transcript share one workspace, with language-support tools available alongside the content.*
+*Video and a Spanish–English transcript share one workspace. Unfamiliar language can be explored alongside the original content.*
 
-## Why I built it
+## From watching to understanding
 
-I wanted to learn Spanish through comprehensible input: learning from meaningful content in the language. At the beginner stage, however, my vocabulary and familiarity with sentence structure, grammar and verb tenses were not yet sufficient to understand much of a video. Watching authentic content alone often left too much of it inaccessible.
-
-I had not found a tool that brought the language support I needed together with the videos I wanted to watch. I built Español to keep real content at the centre of learning, with help for unfamiliar words, sentences, grammar and tenses available in context.
-
-## The learning flow
-
-1. Bring a chosen Spanish video into the workspace.
-2. Follow the video with a Spanish–English transcript.
-3. Inspect unfamiliar language through contextual lookup, sentence explanations and verb reference.
-4. Continue watching, with the material more accessible than it was before.
+1. **Follow a chosen video** with its Spanish–English transcript.
+2. **Explore an unfamiliar word or sentence** through contextual lookup, explanations and verb reference.
+3. **Ask a follow-up question** about the language in that sentence.
+4. **Return to the video**, keeping the original content at the centre of the study session.
 
 ![Existing sentence explanation with word breakdown and a follow-up question](assets/context-explanation.jpg)
 
-*An existing explanation connects the transcript sentence with a word-by-word breakdown and follow-up discussion. Here, the learner asks whether **tan** changes with gender; the response explains how it differs from **tanto/a/os/as**. The explanation is shown in Chinese in this personal study setup.*
+*An existing sentence explanation includes a word breakdown and follow-up discussion. The question asks whether **tan** changes with gender; the response contrasts it with **tanto/a/os/as**. Explanations are in Chinese in this personal study setup.*
 
-## Iterating around continuity
+## Why I built it
 
-As my study progressed, I added connections to earlier material. “Visto antes” review links a word to examples from content already encountered, distinguishes the clicked form from related inflections, and keeps a route back to the original study session.
+I wanted to learn Spanish through comprehensible input: learning from meaningful content in the language. As a beginner, my vocabulary and familiarity with sentence structure, grammar and verb tenses were not yet sufficient to understand much of a video.
 
-Recent iterations refined subtitle timing, lookup-state preservation, word-history updates and episode-tab behaviour. These details support the same goal: moving between video, language support and previous examples without losing the learning context.
+I had not found a tool that brought the support I needed together with the videos I wanted to watch. Español grew from that personal need: make chosen content more accessible while continuing to learn from it.
 
-## Current stage and implementation
+## Design choice: keep earlier examples connected to the current lesson
 
-Español is a personal project run locally on desktop. The account of its usefulness comes from my own learning experience.
+As my study progressed, I added “Visto antes” review to connect a word with examples from material already encountered. It distinguishes the clicked form from related inflections, so an earlier occurrence of that word and a different form are not treated as the same match.
 
-The application uses JavaScript ES modules, Python/Flask, JSON data and a SQLite runtime layer. AI services support transcription, translation, dictionary lookup and explanations.
+The review flow also preserves playback and lookup context when moving between episode tabs. A learner can inspect an earlier example and keep a route back to the original study session.
+
+Iterations around subtitle timing, word-history updates and state restoration support this continuity between watching, looking something up and revisiting earlier material.
+
+## My role and project stage
+
+I defined the product concept and feature direction, used the application for my own learning, and reviewed iterations. Implementation was primarily completed with AI assistance.
+
+Español is a personal project run locally on desktop. Its usefulness is based on my own learning experience.
+
+**Project stack:** JavaScript ES modules, Python/Flask, JSON data and a SQLite runtime layer. AI services support transcription, translation, dictionary lookup and explanations.
