@@ -23,13 +23,27 @@ I wanted to learn Spanish through comprehensible input: learning from meaningful
 
 I had not found a tool that brought the support I needed together with the videos I wanted to watch. Español grew from that personal need: make chosen content more accessible while continuing to learn from it.
 
-## Design choice: keep earlier examples connected to the current lesson
+## One click from a word form to its original video context
 
-As my study progressed, I added “Visto antes” review to connect a word with examples from material already encountered. It distinguishes the clicked form from related inflections, so an earlier occurrence of that word and a different form are not treated as the same match.
+I wanted vocabulary review to reconnect with language I had actually heard. From a word card, “Visto antes” finds sentences in material already encountered, with separate groups for the exact word form and related conjugations.
 
-The review flow also preserves playback and lookup context when moving between episode tabs. A learner can inspect an earlier example and keep a route back to the original study session.
+For example, looking up **vamos** also surfaces forms such as **vas**, **fui** and **ido**. Clicking a result opens its source video at the relevant sentence and starts playback, with the sentence highlighted in the transcript. The same word and its conjugations are one click away from being heard in context.
 
-Iterations around subtitle timing, word-history updates and state restoration support this continuity between watching, looking something up and revisiting earlier material.
+![Looking up vamos with separate tabs for the exact form and related conjugations, each linked to a source sentence](assets/word-form-history.jpg)
+
+*Exact-form matches and other conjugations have separate tabs. Matched words are underlined, and episode badges identify where each sentence came from.*
+
+## Interaction details: explore without losing your place
+
+![The vas example opened in episode 21, with the source sentence highlighted, the original episode 16 still open, and a review dock with a return button](assets/context-replay-workspace.jpg)
+
+*One click on the **vas** example opens episode **#21** at that sentence. The original lesson, **#16**, remains in the top tab strip; the review dock keeps the selected example and a **Volver** (return) control visible.*
+
+- **Keep the original session intact.** Switching episode tabs preserves the playback position, transcript scroll and active word card. Tabs keep their opening order, so navigating does not rearrange the controls.
+- **Keep review beside the content.** A dock holds the matching sentences while the source video and transcript remain visible. It can be minimised for reading space, and its return control takes the learner back to the originating lesson.
+- **Keep grammar detail proportional to the question.** The word card foregrounds the current form and relevant tense, while a separate conjugation reference provides the fuller table on demand.
+
+These details reflect ongoing refinements to subtitle timing, word-history updates and state restoration around the way I actually study.
 
 ## My role and project stage
 
